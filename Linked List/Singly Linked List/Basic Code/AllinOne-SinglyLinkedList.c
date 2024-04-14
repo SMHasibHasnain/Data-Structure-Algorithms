@@ -220,6 +220,7 @@ void deletePos() {
 }
 
 void countTotal() {
+    caution();
     count = 0;
     node *ptr = head;
     while(ptr != NULL) {
@@ -229,6 +230,7 @@ void countTotal() {
 }
 
 void reverse() {
+    caution();
     node *prev = NULL;
     node *current = head;
     node *next = NULL;
