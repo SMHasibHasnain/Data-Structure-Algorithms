@@ -21,6 +21,7 @@ void deletePos();
 void countTotal();
 void reverse();
 void caution();
+void exitGate();
 
 int main() {
     int i;
@@ -38,13 +39,16 @@ int main() {
         printf("7.  Delete the front node\n");
         printf("8.  Delete node of x'th postion\n");
         printf("9.  Count total number of node\n");
-        printf("10. Reverse the linked list\n\n");
+        printf("10. Reverse the linked list\n");
+        printf("(0) Exit\n\n");
         
         printf("=> Enter chosen option's number: ");
         scanf("%d", &i);
         printf("\n");
         
         switch(i) {
+            case 0:
+                exitGate();
             case 1: 
                 create();
                 break;
@@ -241,6 +245,11 @@ void reverse() {
         current = next;
     }
     head = prev;
+}
+
+void exitGate() {
+    printf("Good Luck :)");
+    exit(0);
 }
 
 void caution() {
