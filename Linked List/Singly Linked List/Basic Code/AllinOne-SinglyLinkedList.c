@@ -41,7 +41,7 @@ int main() {
         printf("8.  Delete node of x'th postion\n");
         printf("9.  Count total number of node\n");
         printf("10. Reverse the linked list\n");
-        printf("11.  Search an element\n");
+        printf("11. Search an element\n");
         printf("(0) Exit\n\n");
         
         printf("=> Enter chosen option's number: ");
