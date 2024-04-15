@@ -22,6 +22,7 @@ void countTotal();
 void reverse();
 void caution();
 void exitGate();
+void search();
 
 int main() {
     int i;
@@ -40,6 +41,7 @@ int main() {
         printf("8.  Delete node of x'th postion\n");
         printf("9.  Count total number of node\n");
         printf("10. Reverse the linked list\n");
+        printf("11.  Search an element\n");
         printf("(0) Exit\n\n");
         
         printf("=> Enter chosen option's number: ");
@@ -89,6 +91,9 @@ int main() {
             case 10:
                 reverse();
                 printf("Data has been reversed!\n");   
+                break;
+            case 11:
+                search();
                 break;
             default:
                 printf("Invalid input. Try again\n");    
@@ -257,5 +262,24 @@ void caution() {
         printf("Please create the list first!\n");
         create();
     }
+}
+
+void search() {
+    int value;
+    int pos = 0;
+    printf("Search a value: ");
+    scanf("%d", &value);
+    node* ptr = head;
+    while (ptr != NULL) {
+        pos++;
+        if(ptr->data == value) {
+            printf("Element Found!\n");
+            printf("Number of node position of %d is %d\n", value, pos);
+            return;
+        } else {
+            ptr = ptr->next;
+        }
+    }
+    printf("%d isn't found on the list.\n", value);
 }
     
